@@ -44,7 +44,7 @@ public class RemoteImgController extends BaseController {
             _index = 1;
             _size = 2;
         }
-        List<RemoteImgModel> remoteImgModelList = remoteImgService.getByRange((_index - 1) * _size + 1, _index * _size + 1);
+        List<RemoteImgModel> remoteImgModelList = remoteImgService.getByRange((_index - 1) * _size, _index * _size);
         return CommonReturnType.create(remoteImgModelList);
     }
 
