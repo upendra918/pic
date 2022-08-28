@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'a5c7c5dd-5d46-4d0a-8d0c-35a6251555aa'
 
   # Web app name
-  webAppName: 'nvr1'
+  webAppName: 'nvr'
 
   # Environment name
   environmentName: 'kumaraas'
