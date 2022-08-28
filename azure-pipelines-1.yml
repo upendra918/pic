@@ -35,12 +35,13 @@ stages:
       inputs:
         mavenPomFile: 'pom.xml'
 
+
     - task: CopyFiles@2
-      displayName: 'Copy Files to artifact staging directory'
       inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)'
-        Contents: '**/target/*.?(war|jar)'
-        TargetFolder: $(Build.ArtifactStagingDirectory)
+       SourceFolder: '$(agent.builddirectory)'
+       Contents: '**/target/*.?(war|jar)'
+       TargetFolder: '$(build.artifactstagingdirectory)'
+       CleanTargetFolder: true
       
 
     - upload: $(Build.ArtifactStagingDirectory)
