@@ -12,10 +12,10 @@ variables:
   azureSubscription: 'a5c7c5dd-5d46-4d0a-8d0c-35a6251555aa'
 
   # Web app name
-  webAppName: 'nvr'
+  webAppName: 'nvr1'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'kumaraas'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
