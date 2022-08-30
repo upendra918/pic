@@ -26,10 +26,9 @@ steps:
         Contents: '**/*.war'
         TargetFolder: '$(build.artifactstagingdirectory)'
         CleanTargetFolder: true
-- task: CopyPublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1
   inputs:
-        CopyRoot: '$(Agent.BuildDirectory)'
-        Contents: '**/.war'
-        ArtifactName: 'arifact1'
-        ArtifactType: 'FilePath'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop1'
+    publishLocation: 'Container'
 
